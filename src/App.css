@@ -17,7 +17,7 @@ p {
   color: black;
 }
 
-.container {
+.App .container {
   padding: 40px 60px 40px 60px;
   border: 1px solid gray;
   border-radius: 10px;

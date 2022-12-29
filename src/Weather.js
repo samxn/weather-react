@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import Time from "./Time.js";
 
 export default function Weather() {
   const [city, setCity] = useState("");
@@ -44,9 +43,7 @@ export default function Weather() {
         <h1 id="location" className="searchedCity">
           {city}
         </h1>
-        <h1 className="time" id="dayTime">
-          <Time />
-        </h1>
+        <h1 className="time" id="dayTime"></h1>
         <h2 className="types" id="description">
           Description: {weather.description}
         </h2>
