@@ -39,7 +39,7 @@ export default function Weather() {
   if (loaded) {
     return (
       <div>
-        {form}
+        <div className="form">{form}</div>
         <h1 id="location" className="searchedCity">
           {city}
         </h1>
@@ -57,21 +57,50 @@ export default function Weather() {
             </a>{" "}
           </sup>
         </h1>
+        <img
+          src={weather.icon}
+          alt={weather.description}
+          id="icon"
+          className="mainIcon"
+        />
         <ul>
           <li>Humidity: {weather.humidity} %</li>
           <li>Wind: {weather.wind} km/h</li>
-          <li>
-            <img
-              src={weather.icon}
-              alt={weather.description}
-              id="icon"
-              className="mainIcon"
-            />
-          </li>
         </ul>
       </div>
     );
   } else {
-    return form;
+    return (
+      <div>
+        <div className="form">{form}</div>
+        <h1 id="location" className="searchedCity">
+          Paris
+        </h1>
+        <h1 className="time" id="dayTime"></h1>
+        <h2 className="types" id="description">
+          Description: Fog
+        </h2>
+        <h1 className="tempDegrees">
+          <span className="temperature" id="farenTemp">
+            8
+          </span>
+          <sup className="degrees">
+            <a href="/" id="farenheit">
+              °C
+            </a>{" "}
+          </sup>
+        </h1>
+        <img
+          src={"http://openweathermap.org/img/wn/01n@2x.png"}
+          alt="fog"
+          id="icon"
+          className="mainIcon"
+        />
+        <ul>
+          <li>Humidity: 54 %</li>
+          <li>Wind: 2.06 km/h</li>
+        </ul>
+      </div>
+    );
   }
 }

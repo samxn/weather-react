@@ -71,7 +71,10 @@ p {
   border: 1px solid rgb(0, 0, 0);
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
-
+.App .form {
+  justify-content: center;
+  text-align: center;
+}
 .btn {
   margin: 1px;
   box-shadow: 5px 5px 15px 0px lightgrey;
