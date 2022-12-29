@@ -43,7 +43,7 @@ export default function Weather() {
         <h1 id="location" className="searchedCity">
           {city}
         </h1>
-        <h1 className="time" id="dayTime"></h1>
+
         <h2 className="types" id="description">
           Description: {weather.description}
         </h2>
@@ -76,7 +76,7 @@ export default function Weather() {
         <h1 id="location" className="searchedCity">
           Paris
         </h1>
-        <h1 className="time" id="dayTime"></h1>
+
         <h2 className="types" id="description">
           Description: Fog
         </h2>

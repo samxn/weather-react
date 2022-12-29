@@ -9,8 +9,6 @@ function App() {
           <div className="wrapper">
             <div className="container">
               <Weather />
-
-              <div className="weather-forecast" id="forecast"></div>
             </div>{" "}
             <span className="link">
               <a
