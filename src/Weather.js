@@ -44,9 +44,6 @@ export default function Weather() {
           {city}
         </h1>
 
-        <h2 className="types" id="description">
-          Description: {weather.description}
-        </h2>
         <h1 className="tempDegrees">
           <span className="temperature" id="farenTemp">
             {Math.round(weather.temperature)}
@@ -66,6 +63,7 @@ export default function Weather() {
         <ul>
           <li>Humidity: {weather.humidity} %</li>
           <li>Wind: {weather.wind} km/h</li>
+          <li>{weather.description}</li>
         </ul>
       </div>
     );
@@ -77,9 +75,6 @@ export default function Weather() {
           Paris
         </h1>
 
-        <h2 className="types" id="description">
-          Description: Fog
-        </h2>
         <h1 className="tempDegrees">
           <span className="temperature" id="farenTemp">
             8
@@ -99,6 +94,7 @@ export default function Weather() {
         <ul>
           <li>Humidity: 54 %</li>
           <li>Wind: 2.06 km/h</li>
+          <li>Fog</li>
         </ul>
       </div>
     );
