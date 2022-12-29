@@ -12,19 +12,31 @@
   list-style: none;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  float: right;
 }
 .App input {
   padding: 5px 5px 5px 5px;
+  width: 60%;
 }
 .App button {
-  padding: 5px 5px 5px 5px;
+  border-radius: 4px;
+  padding: 6px 5px 6px 5px;
   cursor: pointer;
+  background-color: rgba(123, 171, 235, 0.596);
+  border: 1px solid black;
+}
+.App button:hover {
+  cursor: pointer;
+  background-color: rgba(123, 172, 235, 0.349);
+}
+.App form {
+  margin-bottom: 20px;
 }
 .App li {
   text-transform: capitalize;
 }
 .App .container {
-  padding: 40px 60px 40px 60px;
+  padding: 40px 16px 150px 16px;
   border: 1px solid gray;
   border-radius: 10px;
   margin-top: 30px;
@@ -32,7 +44,7 @@
 }
 .App .wrapper {
   padding: 40px 60px 40px 60px;
-  width: 70%;
+  width: 600px;
   margin: 30px auto;
 }
 
@@ -41,10 +53,10 @@
   text-transform: capitalize;
 }
 .App .mainIcon {
-  float: right;
   display: block;
-  top: -45px;
-  position: relative;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  float: right;
 }
 
 .App .form {
@@ -54,9 +66,10 @@
 
 .App .searchedCity {
   text-transform: capitalize;
+  text-align: center;
 }
 .App .degrees {
-  top: 8px;
+  top: 18px;
   vertical-align: top;
   position: relative;
 }
@@ -68,7 +81,7 @@
 }
 
 .App .temperature {
-  font-size: 50px;
+  font-size: 40px;
 }
 .App .tempDegrees a {
   color: black;

@@ -32,7 +32,7 @@ export default function Weather() {
   let form = (
     <form onSubmit={handleSubmit}>
       <input type="search" placeholder="Enter a city.." onChange={updateCity} />
-      <button type="Submit">Search</button>
+      <button type="Submit">Go</button>
     </form>
   );
 
@@ -40,62 +40,51 @@ export default function Weather() {
     return (
       <div>
         <div className="form">{form}</div>
-        <h1 id="location" className="searchedCity">
-          {city}
-        </h1>
-
-        <h1 className="tempDegrees">
-          <span className="temperature" id="farenTemp">
-            {Math.round(weather.temperature)}
-          </span>
-          <sup className="degrees">
-            <a href="/" id="farenheit">
-              °C
-            </a>{" "}
-          </sup>
-        </h1>
-        <img
-          src={weather.icon}
-          alt={weather.description}
-          id="icon"
-          className="mainIcon"
-        />
+        <h1 className="searchedCity">{city}</h1>
         <ul>
-          <li>Humidity: {weather.humidity} %</li>
+          <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {weather.wind} km/h</li>
           <li>{weather.description}</li>
+          <li>
+            <img
+              src={weather.icon}
+              alt={weather.description}
+              className="mainIcon"
+            />
+          </li>
         </ul>
+        <h1 className="tempDegrees">
+          <span className="temperature">{Math.round(weather.temperature)}</span>
+          <sup className="degrees">
+            <a href="/">°C</a>{" "}
+          </sup>
+        </h1>
       </div>
     );
   } else {
     return (
       <div>
         <div className="form">{form}</div>
-        <h1 id="location" className="searchedCity">
-          Paris
-        </h1>
-
-        <h1 className="tempDegrees">
-          <span className="temperature" id="farenTemp">
-            8
-          </span>
-          <sup className="degrees">
-            <a href="/" id="farenheit">
-              °C
-            </a>{" "}
-          </sup>
-        </h1>
-        <img
-          src={"http://openweathermap.org/img/wn/01n@2x.png"}
-          alt="fog"
-          id="icon"
-          className="mainIcon"
-        />
+        <h1 className="searchedCity">Paris</h1>
         <ul>
-          <li>Humidity: 54 %</li>
+          <li>Humidity: 54%</li>
           <li>Wind: 2.06 km/h</li>
           <li>Fog</li>
+          <li>
+            <img
+              src={"http://openweathermap.org/img/wn/01n@2x.png"}
+              alt="fog"
+              id="icon"
+              className="mainIcon"
+            />
+          </li>
         </ul>
+        <h1 className="tempDegrees">
+          <span className="temperature">8</span>
+          <sup className="degrees">
+            <a href="/">°C</a>{" "}
+          </sup>
+        </h1>
       </div>
     );
   }
