@@ -1,38 +1,201 @@
-.App {
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 15px;
+}
+p {
+  padding-bottom: 40px;
+  color: gray;
+}
+.App ul {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.stats {
+  color: black;
+}
+
+.container {
+  padding: 40px 60px 40px 60px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.wrapper {
+  padding: 40px 60px 40px 60px;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.d-flex {
+  width: 60%;
+  padding: 0 0 15px 0;
+  display: block;
+  margin: 0 auto;
+}
+.types {
+  float: right;
+  text-transform: capitalize;
+}
+.mainIcon {
+  float: right;
+  display: block;
+  top: -45px;
+  position: relative;
+}
+.Time .time {
+  float: right;
+}
+.btn-outline-success {
+  width: 40px;
+}
+.col-2 {
+  border: 1px solid gray;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 10px;
+  width: 14%;
+}
+.col-2 img {
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80px;
+}
+.col-2:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.74);
+  border: 1px solid rgb(0, 0, 0);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.btn {
+  margin: 1px;
+  box-shadow: 5px 5px 15px 0px lightgrey;
+  border-color: #0b5ed7;
+}
+.btn-success {
+  font-family: "FontAwesome";
+  background-color: #0d6efd;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0d6efd;
+  --bs-btn-border-color: #0d6efd;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3968be;
+  --bs-btn-hover-border-color: #0b5ed7;
+  --bs-btn-focus-shadow-rgb: 60, 153, 110;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0b5ed7;
+  --bs-btn-active-border-color: #0b5ed7;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+.btn-success:before {
+  content: "\f041";
+}
+.btn-success:hover {
+  background-color: #0b5ed7;
+}
+.me-2 {
+  margin-right: 0rem !important;
+  box-shadow: 5px 5px 15px 0px lightgrey;
+}
+.App .searchedCity {
+  text-transform: capitalize;
+}
+.degrees {
+  top: 8px;
+  vertical-align: top;
+  position: relative;
+}
+.degrees a {
+  text-decoration: none;
+}
+.link a {
+  text-decoration: none;
+}
+.fa-solid {
+  font-size: 60px;
+  color: gray;
+}
+.temperature {
+  font-size: 50px;
+}
+.tempDegrees a {
+  color: black;
+}
+.tempDegrees a:hover {
+  color: #0b5ed7;
+}
+.min-temp {
+  color: gray;
+}
+.weather-forecast {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h2 {
+    font-size: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  p {
+    font-size: 10px;
+  }
+  img {
+    width: 50px;
+  }
+  .tempDegrees a {
+    top: 5px;
+    vertical-align: top;
+    position: relative;
+  }
+  .wrapper {
+    padding: 40px 0px 40px 0px;
+    width: 100%;
+    margin: 30px auto;
+  }
+  .weather-forecast img {
+    width: 30px;
+  }
+  .d-flex {
+    width: 95%;
+    padding: 0 0 15px 0;
+    display: block;
+    margin: 0 auto;
+  }
+  .col-2 {
+    border: 1px solid gray;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px 5px;
+    width: 14%;
+  }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+    flex-wrap: unset;
+  }
+  .degrees {
+    top: 18px;
+    vertical-align: top;
+    position: top;
+  }
+  .container {
+    padding: 40px 30px 40px 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
 }
