@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate.js";
+//import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 import "./App.css";
 
@@ -12,11 +13,12 @@ export default function Weather(props) {
     setLoaded(true);
     setWeather({
       temperature: response.data.main.temp,
-      date: new Date(response.data.dt * 1000),
+
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -43,6 +45,7 @@ export default function Weather(props) {
       <div>
         <div className="form">{form}</div>
         <h1 className="searchedCity">{city}</h1>
+        <FormattedDate date={weather.date} />
         <ul>
           <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {Math.round(weather.wind)} km/h</li>
@@ -53,6 +56,10 @@ export default function Weather(props) {
               alt={weather.description}
               className="mainIcon"
             />
+            {/*<WeatherIcon
+              code={props.data.description}
+              alt={props.data.description}
+            />*/}
           </li>
         </ul>
         <h1 className="tempDegrees">
@@ -61,7 +68,8 @@ export default function Weather(props) {
             <a href="/">°C</a>{" "}
           </sup>
         </h1>
-        <FormattedDate />
+        {/* whenClicked is a property not an event, per se. 
+        <FormattedDate /> */}
       </div>
     );
   } else {
@@ -69,6 +77,7 @@ export default function Weather(props) {
       <div>
         <div className="form">{form}</div>
         <h1 className="searchedCity">Paris</h1>
+
         <ul>
           <li>Humidity: 54%</li>
           <li>Wind: 2.06 km/h</li>
@@ -88,7 +97,9 @@ export default function Weather(props) {
             <a href="/">°C</a>{" "}
           </sup>
         </h1>
-        <FormattedDate />
+        {/* whenClicked is a property not an event, per se. 
+        
+        <FormattedDate />*/}
       </div>
     );
   }
