@@ -15,9 +15,10 @@ export default function WeatherTemp(weather) {
     return (
       <h1 className="tempDegrees">
         <span className="temperature">{Math.round(weather.celcius)}</span>
+
         <sup className="degrees">
-          °C |{" "}
-          <a href="/" onClick={convertToF}>
+          <span className="featuredTemp">°C </span>{" "}
+          <a href="/" className="notFeaturedTemp" onClick={convertToF}>
             °F
           </a>
         </sup>
@@ -29,10 +30,11 @@ export default function WeatherTemp(weather) {
       <h1 className="tempDegrees">
         <span className="temperature">{Math.round(faren)}</span>
         <sup className="degrees">
-          <a href="/" onClick={convertToC}>
+          {" "}
+          <span className="featuredTemp">°F </span>{" "}
+          <a href="/" className="notFeaturedTemp" onClick={convertToC}>
             °C{" "}
-          </a>{" "}
-          | °F
+          </a>
         </sup>
       </h1>
     );
