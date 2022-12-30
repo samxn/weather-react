@@ -77,7 +77,11 @@ export default function Weather(props) {
       <div>
         <div className="form">{form}</div>
         <h1 className="searchedCity">Paris</h1>
-
+        <div>
+          12/29/22
+          <br />
+          9:00 PM
+        </div>
         <ul>
           <li>Humidity: 54%</li>
           <li>Wind: 2.06 km/h</li>
@@ -93,9 +97,7 @@ export default function Weather(props) {
         </ul>
         <h1 className="tempDegrees">
           <span className="temperature">8</span>
-          <sup className="degrees">
-            <a href="/">°C</a>{" "}
-          </sup>
+          <sup className="degrees">°C| °F</sup>
         </h1>
         {/* 
         <FormattedDate />*/}
