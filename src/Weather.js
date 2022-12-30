@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate.js";
+import WeatherTemp from "./WeatherTemp.js";
 //import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 import "./App.css";
@@ -60,12 +61,15 @@ export default function Weather(props) {
             {/* <WeatherIcon code={props.data.icon} size={52} /> */}
           </li>
         </ul>
+        <WeatherTemp celcius={weather.temperature} />
+        {/*
         <h1 className="tempDegrees">
           <span className="temperature">{Math.round(weather.temperature)}</span>
           <sup className="degrees">
             <a href="/">°C</a>{" "}
           </sup>
         </h1>
+        */}
       </div>
     );
   } else {
