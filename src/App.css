@@ -4,15 +4,13 @@
 .App h2 {
   font-size: 15px;
 }
-.App p {
-  padding-bottom: 40px;
-  color: gray;
-}
+
 .App ul {
   list-style: none;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   float: right;
+  text-align: right;
 }
 .App input {
   padding: 5px 5px 5px 5px;
@@ -22,12 +20,13 @@
   border-radius: 4px;
   padding: 6px 5px 6px 5px;
   cursor: pointer;
-  background-color: rgba(123, 171, 235, 0.596);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.329);
   border: 1px solid black;
 }
 .App button:hover {
   cursor: pointer;
-  background-color: rgba(123, 172, 235, 0.349);
+  background-color: rgba(0, 0, 0, 0.137);
 }
 .App form {
   margin-bottom: 20px;
@@ -42,6 +41,25 @@
   margin-top: 30px;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
+.App .forecast img {
+  width: 30px;
+}
+.App .forecast {
+  background-color: rgba(0, 0, 0, 0.329);
+  width: 200px;
+  border-radius: 4px;
+}
+.App .forecast p {
+  padding: 2px 0 4px 0;
+  margin: 0 0 0 5px;
+  color: white;
+}
+.App .min {
+  padding: 2px 0 4px 0;
+  margin: 0 0 0 5px;
+  color: rgba(255, 255, 255, 0.671);
+}
+
 .App .wrapper {
   padding: 40px 60px 40px 60px;
   width: 600px;

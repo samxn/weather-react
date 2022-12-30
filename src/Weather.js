@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate.js";
 import WeatherTemp from "./WeatherTemp.js";
+//import WeatherForecast from "./WeatherForecast.js";
 //import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 import "./App.css";
@@ -9,18 +10,29 @@ export default function Weather(props) {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
+  let [forecast, setForecast] = useState({});
 
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
       temperature: response.data.main.temp,
-
+      coord: response.data.coord,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
     });
+  }
+  function weatherForecast(props) {
+    let apiKey = "094780c710fa4efd669f0df8c3991927";
+    let lon = props.coord.lon;
+    let lat = props.coord.lati;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleResponse(response) {
+    setForecast(response.data.daily);
   }
 
   function handleSubmit(event) {
@@ -70,6 +82,28 @@ export default function Weather(props) {
           </sup>
         </h1>
         */}
+        <div className="forecast">
+          <p>
+            Day{" "}
+            <img
+              src={weather.icon}
+              alt={weather.description}
+              className="mainIcon"
+            />{" "}
+            <span className="min">{forecast[0].temp.max}°</span>{" "}
+            {forecast[0].temp.min}°
+          </p>
+
+          <p>
+            Day{" "}
+            <img
+              src={weather.icon}
+              alt={weather.description}
+              className="mainIcon"
+            />{" "}
+            <span className="min">lo°</span> hi°
+          </p>
+        </div>
       </div>
     );
   } else {
@@ -97,7 +131,10 @@ export default function Weather(props) {
         </ul>
         <h1 className="tempDegrees">
           <span className="temperature">8</span>
-          <sup className="degrees">°C| °F</sup>
+          <sup className="degrees">
+            <span className="featuredTemp">°C </span>{" "}
+            <span className="notFeaturedTemp">°F </span>
+          </sup>
         </h1>
         {/* 
         <FormattedDate />*/}
