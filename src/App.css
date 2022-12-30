@@ -59,14 +59,14 @@
   float: right;
 }
 .App .featuredTemp {
-  font-size: 30px;
+  font-size: 20px;
   top: 25px;
   vertical-align: top;
   position: relative;
 }
 .App .notFeaturedTemp {
   color: rgba(128, 128, 128, 0.575);
-  font-size: 30px;
+  font-size: 20px;
   top: 25px;
   vertical-align: top;
   position: relative;
