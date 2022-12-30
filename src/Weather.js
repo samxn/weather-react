@@ -56,10 +56,8 @@ export default function Weather(props) {
               alt={weather.description}
               className="mainIcon"
             />
-            {/*<WeatherIcon
-              code={props.data.description}
-              alt={props.data.description}
-            />*/}
+
+            {/* <WeatherIcon code={props.data.icon} size={52} /> */}
           </li>
         </ul>
         <h1 className="tempDegrees">
@@ -68,8 +66,6 @@ export default function Weather(props) {
             <a href="/">°C</a>{" "}
           </sup>
         </h1>
-        {/* whenClicked is a property not an event, per se. 
-        <FormattedDate /> */}
       </div>
     );
   } else {
@@ -97,8 +93,7 @@ export default function Weather(props) {
             <a href="/">°C</a>{" "}
           </sup>
         </h1>
-        {/* whenClicked is a property not an event, per se. 
-        
+        {/* 
         <FormattedDate />*/}
       </div>
     );
