@@ -71,6 +71,7 @@ export default function Weather(props) {
           </sup>
         </h1>
         */}
+        <WeatherForecast />
       </div>
     );
   } else {
