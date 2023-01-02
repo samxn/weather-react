@@ -13,20 +13,28 @@
   text-align: right;
 }
 .App input {
-  padding: 5px 5px 5px 5px;
-  width: 60%;
+  padding: 5px 5px 5px 15px;
+  width: 50%;
+  border-radius: 20px 0px 0px 20px;
+  border: 1px solid black;
+  border-right: none;
+  background-color: rgba(0, 0, 0, 0.027);
 }
 .App button {
-  border-radius: 4px;
-  padding: 6px 5px 6px 5px;
+  width: 10%;
+  border-radius: 0px 20px 20px 0px;
+  padding: 5px 5px 5px 5px;
   cursor: pointer;
   color: white;
-  background-color: rgba(0, 0, 0, 0.329);
+  background-color: rgba(0, 0, 0, 0.027);
   border: 1px solid black;
+  border-left: none;
+  transition: transform 0.2s;
 }
-.App button:hover {
+
+.App button img:hover {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.137);
+  transform: scale(1.1);
 }
 .App form {
   margin-bottom: 20px;
@@ -34,12 +42,16 @@
 .App li {
   text-transform: capitalize;
 }
+.App .searchIcon {
+  width: 25px;
+  padding: 1px 5px 4px 5px;
+}
 .App .container {
   padding: 40px 16px 150px 16px;
   border: 1px solid gray;
   border-radius: 10px;
   margin-top: 30px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #f5f7fa9d 0%, #c3cfe2a6 100%);
 }
 .App .forecast img {
   width: 30px;

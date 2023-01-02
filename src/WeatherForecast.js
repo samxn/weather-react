@@ -27,8 +27,8 @@ export default function WeatherForecast(props) {
         <p>
           {day()}
           <img
-            src={Weather.displayweather.weather.icon}
-            alt={Weather.displayweather.weather.description}
+            src={props.weather.icon}
+            alt={props.weather.description}
             className="mainIcon"
           />{" "}
           <span className="min">{minTemperature()}°</span> {maxTemperature()}°

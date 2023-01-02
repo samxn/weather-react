@@ -15,7 +15,7 @@ export default function Weather(props) {
     setLoaded(true);
     setWeather({
       temperature: response.data.main.temp,
-
+      //feels: response.data.main.feels_like,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -38,7 +38,13 @@ export default function Weather(props) {
   let form = (
     <form onSubmit={handleSubmit}>
       <input type="search" placeholder="Enter a city.." onChange={updateCity} />
-      <button type="Submit">Go</button>
+      <button type="Submit">
+        <img
+          src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png"
+          alt={weather.description}
+          className="searchIcon"
+        />
+      </button>
     </form>
   );
 
@@ -52,6 +58,7 @@ export default function Weather(props) {
           <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {Math.round(weather.wind)} km/h</li>
           <li>{weather.description}</li>
+          {/*  <li>{weather.feels}</li>*/}
           <li>
             <img
               src={weather.icon}
@@ -71,7 +78,7 @@ export default function Weather(props) {
           </sup>
         </h1>
         */}
-        <WeatherForecast />
+        <WeatherForecast weather={weather} />
       </div>
     );
   } else {
@@ -80,8 +87,7 @@ export default function Weather(props) {
         <div className="form">{form}</div>
         <h1 className="searchedCity">Paris</h1>
         <div>
-          12/29/22
-          <br />
+          12/29/22 <br />
           9:00 PM
         </div>
         <ul>
