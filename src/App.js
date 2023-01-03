@@ -9,7 +9,7 @@ function App() {
         <div>
           <div className="wrapper">
             <div className="container">
-              <Weather />
+              <Weather defaultCity="Atlanta" />
             </div>{" "}
             <span className="link">
               <a

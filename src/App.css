@@ -47,7 +47,7 @@
   padding: 1px 5px 4px 5px;
 }
 .App .container {
-  padding: 40px 16px 150px 16px;
+  padding: 40px 16px 10px 16px;
   border: 1px solid gray;
   border-radius: 10px;
   margin-top: 30px;
@@ -56,15 +56,22 @@
 .App .forecast img {
   width: 30px;
 }
+
 .App .forecast {
   background-color: rgba(0, 0, 0, 0.329);
   width: 200px;
   border-radius: 4px;
 }
+
 .App .forecast p {
-  padding: 2px 0 4px 0;
+  padding: 5px 0 0px 0;
   margin: 0 0 0 5px;
   color: white;
+}
+
+.App .maxmin {
+  padding-left: 40px;
+  float: right;
 }
 .App .min {
   padding: 2px 0 4px 0;
