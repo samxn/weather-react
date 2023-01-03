@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function WeatherTemperature(props) {
-  const [unit, setUnit] = useState("celsius");
-  function showFahrenheit(event) {
-    event.preventDefault();
-    setUnit("fahrenheit");
-  }
+  const unit = "celsius"; // use [unit, setUnit] and add useState if adding Fahreheit
+  //function showFahrenheit(event) {
+  //event.preventDefault();
+  // setUnit("fahrenheit");
+  //}
 
   /* function showCelsius(event) {
     event.preventDefault();
