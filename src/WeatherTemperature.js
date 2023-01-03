@@ -29,8 +29,8 @@ export default function WeatherTemperature(props) {
       </div>
     );
   }
-  {
-    /*else {
+
+  /*else {
     return (
       <div className="tempDegrees">
         <span className="temperature">{Math.round(fahrenheit())}</span>
@@ -44,5 +44,4 @@ export default function WeatherTemperature(props) {
       </div>
     );
   }*/
-  }
 }
